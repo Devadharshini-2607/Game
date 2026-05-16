@@ -1,0 +1,23 @@
+import random
+number = (random.randrange(1,100))
+print("HI! I'm thinking of a number between 1 and 100 Can you guess it?")
+user = input (("YES/NO:").lower())
+if user == "YES":
+    print("Great!,Lets start the game")
+else:
+    print("okay! May be next time")
+    exit()
+tries = 0
+while True:
+       tries+=1
+       user = int(input("Enter the number: "))
+     
+       if user > number:
+          print("The guessed number is high")
+       elif user < number:
+          print("The guessed number is low")
+       elif user == number:
+          print("GOOD JOB! You guessed the correct number")
+          break
+       else:
+           print("Invalid input.Enter a number between 1 to 100.")
